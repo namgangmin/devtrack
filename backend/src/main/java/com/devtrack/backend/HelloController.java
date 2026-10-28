@@ -12,5 +12,12 @@ public class HelloController {
     public Map<String, String> hello() {
         return Map.of("message", "Hello, DevTrack!");
     }
-    
+ 
+    @GetMapping("/api/status")
+    public Map<String, String> status() {
+        return Map.of(
+            "service", "DevTrack",
+        "status", "running"
+    );
+    }
 }
